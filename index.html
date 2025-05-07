@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-172093667-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-172093667-1");
+    </script>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie-edge" />
+    <title>FLAT HEROES - FANGAME Remake</title>
+    <link rel="stylesheet" href="css/app.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        font-family: "Roboto", sans-serif;
+      }
+
+      #info {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        width: 100%;
+      }
+
+      .controls-container {
+        background-color: rgba(0, 0, 0, 0.85);
+        padding: 30px;
+        border-radius: 10px;
+        max-width: 1000px;
+        margin: 0 auto;
+        color: #ffffff;
+        border: 2px solid #00ff00;
+        box-shadow: 0 0 20px rgba(0, 255, 0, 0.3);
+      }
+
+      .check-list {
+        list-style-type: none;
+        padding-left: 0;
+        margin: 0;
+      }
+
+      .check-list li {
+        margin-bottom: 20px;
+        font-size: 22px;
+        text-shadow: 0 0 5px rgba(0, 255, 0, 0.7);
+        list-style: none;
+        padding: 0;
+      }
+
+      h2 {
+        color: #00ff00;
+        font-size: 32px;
+        margin-top: 25px;
+        margin-bottom: 20px;
+        text-shadow: 0 0 10px rgba(0, 255, 0, 0.7);
+      }
+    </style>
+  </head>
+
+  <body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/109/three.js"></script>
+    <script src="./js/libs/Tween.js"></script>
+    <script src="./js/libs/joystick.js"></script>
+    <script type="module" src="js/app.js"></script>
+  </body>
+
+  <progress-ring stroke="26" radius="100" progress="0"></progress-ring>
+  <img src="img/tick.png" id="tickLevelDone" />
+  <img src="img/enter.png" id="hitEnter" />
+  <section id="info">
+    <div class="controls-container">
+      <h2>PRESS ENTER</h2>
+      <ul class="check-list">
+        <li>TO START THE GAME OR MOVE ON TO NEXT LEVEL</li>
+      </ul>
+      <h2>CONTROLS</h2>
+      <ul class="check-list">
+        <li>MOVE : use LEFT and RIGHT arrows</li>
+        <li>JUMP : SPACE BAR (twice for double jump)</li>
+        <li>DASH : CTRL</li>
+        <li>STICK TO WALLS : jump against one and HOLD RIGHT or LEFT arrow</li>
+      </ul>
+    </div>
+  </section>
+
+  <div style="display: none">
+    <audio id="thudPew">
+      <source src="sound/pew.mp3" type="audio/mpeg" />
+      Your browser does not support the audio tag.
+    </audio>
+    <audio id="plank">
+      <source src="sound/plank.mp3" type="audio/mpeg" />
+      Your browser does not support the audio tag.
+    </audio>
+    <audio id="pew">
+      <source src="sound/lightThud.mp3" type="audio/mpeg" />
+      Your browser does not support the audio tag.
+    </audio>
+    <audio id="bassLoop">
+      <source src="sound/bassLoop.mp3" type="audio/mpeg" />
+      Your browser does not support the audio tag.
+    </audio>
+    <audio id="homing_go">
+      <source src="sound/homing_go.mp3" type="audio/mpeg" />
+      Your browser does not support the audio tag.
+    </audio>
+    <audio id="homing_die">
+      <source src="sound/homing_die.mp3" type="audio/mpeg" />
+      Your browser does not support the audio tag.
+    </audio>
+  </div>
+</html>

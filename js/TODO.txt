@@ -1,0 +1,6 @@
+
+DONE :
+
+- Hero burst : same particle ststem as missiles
+TODO : compose hero of 4 (or x) boxes and make it "burst" separate when dying (as if it exploded)
+ALT : keep particle system, and arange them as mentionned to give illusion of it bursting open
